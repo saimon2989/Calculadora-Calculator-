@@ -1,129 +1,120 @@
 
-// Variables
-let operandoA;
-let operandoB;
-let operation;
-// calculator function
-function init(){
-    //Variables y/o constantes
-    const result = document.getElementById("result");
-    const reset1 = document.getElementById("reset1");
-    const reset2 = document.getElementById("reset2");
-    const plus = document.getElementById("plus");
-    const minus = document.getElementById("minus");
-    const multiplication = document.getElementById("multiplication");
-    const division = document.getElementById("division");
-    const equal = document.getElementById("equal");
-    const one = document.getElementById("one");
-    const two = document.getElementById("two");
-    const three = document.getElementById("three");
-    const four = document.getElementById("four");
-    const five = document.getElementById("five");
-    const six = document.getElementById("six");
-    const seven = document.getElementById("seven");
-    const eight = document.getElementById("eight");
-    const nine = document.getElementById("nine");
-    const cero = document.getElementById("cero");
-    const point = document.getElementById("point");
+//Variables y/o constantes
+const reset1 = document.getElementsByName("reset1")[0];
+const reset2 = document.getElementsByName("reset2")[0];
+const opeButton =document.getElementsByName('opeButton');
+const equal = document.getElementsByName("equal")[0];
+const numberButton = document.getElementsByName('dataNumber');
+const point = document.getElementById("point");
+let result = document.getElementById("result");
 
-    //Eventos
-    one.onclick = function(e){
-        result.textContent = result.textContent + "1"
-    }
-    two.onclick = function(e){
-        result.textContent = result.textContent + "2"
-    }
-    three.onclick = function(e){
-        result.textContent = result.textContent + "3"
-    }
-    four.onclick = function(e){
-        result.textContent = result.textContent + "4"
-    }
-    five.onclick = function(e){
-        result.textContent = result.textContent + "5"
-    }
-    six.onclick = function(e){
-        result.textContent = result.textContent + "6"
-    }
-    seven.onclick = function(e){
-        result.textContent = result.textContent + "7"
-    }
-    eight.onclick = function(e){
-        result.textContent = result.textContent + "8"
-    }
-    nine.onclick = function(e){
-        result.textContent = result.textContent + "9"
-    }
-    cero.onclick = function(e){
-        result.textContent = result.textContent + "0"
-    }
-    point.onclick = function(e){
-        result.textContent = result.textContent + "."
-    }
-    reset1.onclick = function(e){
-        operandoA = "";
-        operandoB = "";
-        operation = "";
-        resete();
-    }
-    reset2.onclick = function(e){
-        clean();
-    }
-    plus.onclick = function(e){
-        operandoA = result.textContent;
-        operation = "+"; 
-        clean();
-    }
-    minus.onclick = function(e){
-        operandoA = result.textContent;
-        operation = "-"; 
-        clean();
-    }
-    multiplication.onclick = function(e){
-        operandoA = result.textContent;
-        operation = "*"; 
-        clean();
-    }
-    division.onclick = function(e){
-        operandoA = result.textContent;
-        operation = "/"; 
-        clean();
-    }
-    equal.onclick = function(e){
-        operandoB = result.textContent;
-        answer();
-    }
-    // Metodos
+let operA = '';
+let operB = '';
+let operation = undefined;
 
-    function clean(){
-        result.textContent = "";
-    }
 
-    function resete(){
-        result.textContent = "";
-        operandoA = 0;
-        operandoB = 0;
-        operation = "";
-    }
+//Eventos
+numberButton.forEach(function(button){
+button.addEventListener('click', function(){
+    addNumber(button.innerText);
+    })
+});
 
-    function answer(){
-        let res = 0;
-        switch(operation){
-            case "+": 
-                res = parseFloat(operandoA) + parseFloat(operandoB);break;
-            case "-": 
-                res = parseFloat(operandoA) - parseFloat(operandoB);break;
-            case "*": 
-                res = parseFloat(operandoA) * parseFloat(operandoB);break;
-            case "/": 
-                res = parseFloat(operandoA) / parseFloat(operandoB);break; 
-        }
-        resete();
-        result.textContent = res;
+opeButton.forEach(function(button){
+    button.addEventListener('click', function(){
+        selecOperation(button.innerText);
+    })
+});
+equal.addEventListener('click', function(){
+    answer();
+    refreshDisplay();
+});
+
+reset1.addEventListener('click', function(){
+    clean();
+    refreshDisplay();
+})
+reset2.addEventListener('click', function(){
+    reset();
+    refreshDisplay();
+})
+
+
+point.addEventListener('click', function(){
+    addPoint();
+})
+
+
+// reset2.addEventListener('click', function(){
+//     clean();
+// }) 
+
+// Metodos
+
+function addNumber(num){
+    operA = operA.toString() + num.toString();
+    refreshDisplay();
+}
+function selecOperation(op){
+    if (selecOperation === "") return;
+    if (operB !== ""){
+        answer()
     }
-    
+    operation = op.toString();
+    operB = operA;
+    operA = "";
+}
+
+function answer(){
+    let calculate;
+    const anterior = parseFloat(operB);
+    const actual = parseFloat(operA);
+    if (isNaN(anterior) || isNaN(actual)) return;
+    switch(operation){
+        case "+":
+            calculate = anterior + actual;
+            break;
+        case "-":
+            calculate  = anterior - actual;
+            break;
+        case "*":
+            calculate = anterior * actual;
+            break;
+        case "/":
+            calculate = anterior / actual;
+            break;
+        default:
+            return;
+    }
+    operA = calculate;
+    operation = undefined;
+    operB = ""; 
+}
+
+function refreshDisplay(){
+    result.value = operA;
+}
+
+function reset(){
+    operA = 0;
+    operB = "";
+    operation = "";
 
 }
+
+function clean(){
+    operA = "";
+    operB = "";
+    operation = undefined;
+}
+
+function addPoint(num){
+    operA = operA + ".";
+    refreshDisplay();
+}
+
+clean();
+
 
 
 
