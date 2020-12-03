@@ -1,0 +1,114 @@
+
+*{
+    font-family: 'Kufam', cursive;
+    margin:  auto;
+}
+body{
+    background-color: whitesmoke;
+}
+.calculator {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 50px auto;
+    padding: 16px;
+    background-color: rgb(235, 235, 235);
+    width: 300px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+                -2px -2px 12px rgba(255, 255, 255, 0.5),
+                inset 2px -2px 4px rgba(255, 255, 255, 0.1),
+                2px 2px 8px rgba(0, 0, 0, 0.3);
+    
+}
+.calculator:hover {
+    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+                inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+                inset 2px -2px 4px rgba(255, 255, 255, 0.1),
+                inset 2px 2px 8px rgba(0, 0, 0, 0.3);
+    
+
+}
+
+.calculator td button {
+    display: block;
+    width: 62.5px;
+    height: 62.5px;
+    font-size: 25px;
+    
+}
+
+#result {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-left: 6px;
+    width: 250px;
+    height: 50px;
+    line-height: 60px;
+    background-color: #fff;
+    color: #5a84a2;
+    box-shadow: -2px -2px 8px rgba(255, 255, 255, 0.5),
+                -2px -2px 12px rgba(255, 255, 255, 0.5),
+                inset 2px -2px 4px rgba(255, 255, 255, 0.5),
+                2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+
+}
+.title1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    color: #5a84a2;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 25px;
+    list-style: none;
+    text-decoration: none;
+    border-style: none;
+    background-color: #f2f3f7;
+    color: #5a84a2;
+    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+                -2px -2px 12px rgba(255, 255, 255, 0.5),
+                inset 2px -2px 4px rgba(255, 255, 255, 0.1),
+                2px 2px 8px rgba(0, 0, 0, 0.15);
+
+
+    
+}
+button:hover {
+    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+                inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+                inset 2px -2px 4px rgba(255, 255, 255, 0.1),
+                inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    
+}
+
+.row1{
+    display: flex;
+    flex-flow: row;
+}
+.row2{
+    display: flex;
+    flex-flow: row;
+}
+.row3{
+    display: flex;
+    flex-flow: row;
+}
+.row4{
+    display: flex;
+    flex-flow: row;
+}
+.row5{
+    display: flex;
+    flex-flow: row;
+}
