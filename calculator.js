@@ -1,6 +1,5 @@
 
 // Variables
-
 let operandoA;
 let operandoB;
 let operation;

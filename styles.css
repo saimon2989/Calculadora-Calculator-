@@ -9,32 +9,28 @@ body{
 .calculator {
     display: flex;
     flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
     margin: 50px auto;
     padding: 16px;
     background-color: rgb(236, 236, 236);
-    width: 270px;
+    width: 285px;
     height: 450px;
-    border-radius: 15px;
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
                 -2px -2px 12px rgba(255, 255, 255, 0.5),
                 inset 2px -2px 4px rgba(255, 255, 255, 0.1),
                 2px 2px 8px rgba(0, 0, 0, 0.3);
-    
+    border-radius: 15px;
 }
-.calculator:hover {
+
+.calculator:hover{
     box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
                 inset -2px -2px 12px rgba(255, 255, 255, 0.5),
                 inset 2px -2px 4px rgba(255, 255, 255, 0.1),
                 inset 2px 2px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     
-
 }
 
-.calculator td button {
+.calculator button {
     display: block;
     width: 62.5px;
     height: 62.5px;
@@ -47,8 +43,8 @@ body{
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
-    width: 250px;
-    height: 50px;
+    width: 285px;
+    height: 70px;
     line-height: 60px;
     background-color: #fff;
     color: #5a84a2;
@@ -57,6 +53,7 @@ body{
                 inset 2px -2px 4px rgba(255, 255, 255, 0.5),
                 2px 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
+    overflow: auto;
 
 }
 .title1 {
@@ -83,6 +80,7 @@ button {
     width: 60px;
     height: 60px;
     border-radius: 30px;
+    margin: 0 5px;
     font-size: 25px;
     list-style: none;
     text-decoration: none;
