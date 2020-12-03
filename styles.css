@@ -10,10 +10,12 @@ body{
     display: flex;
     flex-flow: column;
     justify-content: space-around;
+    align-items: center;
+    align-content: center;
     margin: 50px auto;
     padding: 16px;
-    background-color: rgb(226, 226, 226);
-    width: 300px;
+    background-color: rgb(236, 236, 236);
+    width: 270px;
     height: 450px;
     border-radius: 15px;
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
@@ -45,7 +47,6 @@ body{
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
-    margin-left: 6px;
     width: 250px;
     height: 50px;
     line-height: 60px;
@@ -97,10 +98,10 @@ button {
     
 }
 button:hover {
-    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
-                inset -2px -2px 12px rgba(255, 255, 255, 0.5),
-                inset 2px -2px 4px rgba(255, 255, 255, 0.1),
-                inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: inset -1px -1px 8px rgba(255, 255, 255, 1),
+                inset -1px -1px 12px rgba(255, 255, 255, 0.5),
+                inset 1px -1px 4px rgba(255, 255, 255, 0.1),
+                inset 1px 1px 8px rgba(0, 0, 0, 0.15);
     transition: 0.2s ease-in-out;
     cursor: pointer;
     
