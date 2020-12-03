@@ -1,10 +1,10 @@
 
 //Variables y/o constantes
+const numberButton = document.getElementsByName('dataNumber');
+const opeButton =document.getElementsByName('opeButton');
 const reset1 = document.getElementsByName("reset1")[0];
 const reset2 = document.getElementsByName("reset2")[0];
-const opeButton =document.getElementsByName('opeButton');
 const equal = document.getElementsByName("equal")[0];
-const numberButton = document.getElementsByName('dataNumber');
 const point = document.getElementById("point");
 let result = document.getElementById("result");
 
@@ -36,20 +36,13 @@ reset1.addEventListener('click', function(){
 })
 reset2.addEventListener('click', function(){
     reset();
-    refreshDisplay();
 })
-
 
 point.addEventListener('click', function(){
     addPoint();
 })
 
-
-// reset2.addEventListener('click', function(){
-//     clean();
-// }) 
-
-// Metodos
+// Metodos y funciones
 
 function addNumber(num){
     operA = operA.toString() + num.toString();
@@ -70,19 +63,20 @@ function refreshDisplay(){
 }
 
 function reset(){
-    result.textContent = "";
-    operA = "";
-    operB = "";
-    operation = "";
-    
-
+    numberDigits = document.getElementById("result").value.length;
+    if (numberDigits == 1) {
+        document.getElementById("result").value = "0";
+    } else {
+        document.getElementById("result").value = document.getElementById("result").value.substring(0,numberDigits -1);
+    }
 }
 
 function clean(){
     result.textContent = "";
-    operA = 0;
-    operB = 0;
+    operA = "";
+    operB = "";
     operation = "";
+    document.getElementById('result').value = "0";
 }
 
 function addPoint(num){
@@ -115,7 +109,6 @@ function answer(){
     operation = undefined;
     operB = ""; 
 }
-
 clean();
 
 
