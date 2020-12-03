@@ -8,11 +8,11 @@ body{
 .calculator {
     display: flex;
     flex-flow: column;
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 16px;
     background-color: #eee;
     width: 295px;
-    height: 450px;
+    height: 470px;
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
                 -2px -2px 12px rgba(255, 255, 255, 0.5),
                 inset 2px -2px 4px rgba(255, 255, 255, 0.1),
@@ -43,7 +43,7 @@ body{
     font-size: 30px;
     margin-bottom: 20px;
     width: 285px;
-    height: 70px;
+    height: 90px;
     line-height: 70px;
     background-color: #eee;
     color: #5a84a2;
@@ -59,7 +59,7 @@ body{
     display: flex;
     justify-content: center;
     width: fit-content;
-    margin-top: 5px;
+    margin-top: 30px;
     color: #5a84a2;
     border-radius: 35px;
     padding: 15px;
