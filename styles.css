@@ -38,6 +38,7 @@ body{
 }
 
 #result {
+    padding-right: 15px;
     display: block;
     text-align: center;
     font-size: 30px;
@@ -53,6 +54,9 @@ body{
                 inset 2px 2px 8px rgba(0, 0, 0, 0.5);
     border-radius: 35px;
     overflow: auto;
+    word-wrap: normal;
+    word-break: keep-all;
+    text-align: end;
 
 }
 .title1 {
