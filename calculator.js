@@ -65,6 +65,31 @@ function selecOperation(op){
     operA = "";
 }
 
+function refreshDisplay(){
+    result.value = operA;
+}
+
+function reset(){
+    result.textContent = "";
+    operA = "";
+    operB = "";
+    operation = "";
+    
+
+}
+
+function clean(){
+    result.textContent = "";
+    operA = 0;
+    operB = 0;
+    operation = "";
+}
+
+function addPoint(num){
+    operA = operA + ".";
+    refreshDisplay();
+}
+
 function answer(){
     let calculate;
     const anterior = parseFloat(operB);
@@ -89,28 +114,6 @@ function answer(){
     operA = calculate;
     operation = undefined;
     operB = ""; 
-}
-
-function refreshDisplay(){
-    result.value = operA;
-}
-
-function reset(){
-    operA = 0;
-    operB = "";
-    operation = "";
-
-}
-
-function clean(){
-    operA = "";
-    operB = "";
-    operation = undefined;
-}
-
-function addPoint(num){
-    operA = operA + ".";
-    refreshDisplay();
 }
 
 clean();
