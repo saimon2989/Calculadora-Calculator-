@@ -60,15 +60,13 @@ function init(){
     point.onclick = function(e){
         result.textContent = result.textContent + "."
     }
-
-    reset2.onclick = function(e){
-        clean();
-    }
-
     reset1.onclick = function(e){
         operandoA = "";
         operandoB = "";
         operation = "";
+        resete();
+    }
+    reset2.onclick = function(e){
         clean();
     }
     plus.onclick = function(e){
@@ -94,9 +92,7 @@ function init(){
     equal.onclick = function(e){
         operandoB = result.textContent;
         answer();
-
     }
-
     // Metodos
 
     function clean(){
@@ -120,8 +116,7 @@ function init(){
             case "*": 
                 res = parseFloat(operandoA) * parseFloat(operandoB);break;
             case "/": 
-                res = parseFloat(operandoA) / parseFloat(operandoB);break;
-                
+                res = parseFloat(operandoA) / parseFloat(operandoB);break; 
         }
         resete();
         result.textContent = res;
