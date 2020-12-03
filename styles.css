@@ -1,4 +1,3 @@
-
 *{
     font-family: 'Kufam', cursive;
     margin:  auto;
@@ -12,7 +11,7 @@ body{
     margin: 50px auto;
     padding: 16px;
     background-color: rgb(236, 236, 236);
-    width: 285px;
+    width: 295px;
     height: 450px;
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
                 -2px -2px 12px rgba(255, 255, 255, 0.5),
@@ -30,7 +29,7 @@ body{
     
 }
 
-.calculator button {
+.calculator span {
     display: block;
     width: 62.5px;
     height: 62.5px;
@@ -69,22 +68,12 @@ body{
                 inset 2px -2px 4px rgba(255, 255, 255, 0.1),
                 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
-/* .title1:hover {
-    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
-                inset -2px -2px 12px rgba(255, 255, 255, 0.5),
-                inset 2px -2px 4px rgba(255, 255, 255, 0.1),
-                inset 2px 2px 8px rgba(0, 0, 0, 0.3);
-} */
-
-button {
+span {
     width: 60px;
     height: 60px;
     border-radius: 30px;
     margin: 0 5px;
     font-size: 25px;
-    list-style: none;
-    text-decoration: none;
-    border-style: none;
     background-color: #f2f3f7;
     color: #5a84a2;
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
@@ -95,7 +84,7 @@ button {
 
     
 }
-button:hover {
+span:hover {
     box-shadow: inset -1px -1px 8px rgba(255, 255, 255, 1),
                 inset -1px -1px 12px rgba(255, 255, 255, 0.5),
                 inset 1px -1px 4px rgba(255, 255, 255, 0.1),
@@ -105,23 +94,44 @@ button:hover {
     
 }
 
-.row1{
+.row1 {
     display: flex;
-    flex-flow: row;
+}
+.row1 > div > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .row2{
     display: flex;
-    flex-flow: row;
+}
+.row2 > div > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .row3{
     display: flex;
-    flex-flow: row;
+}
+.row3 > div > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .row4{
     display: flex;
-    flex-flow: row;
+}
+.row4 > div > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .row5{
     display: flex;
+}
+.row5 > div > span {
+    display: flex;
     flex-flow: row;
+    justify-content: center;
+    align-items: center;
 }
