@@ -35,7 +35,7 @@ reset1.addEventListener('click', function(){
     refreshDisplay();
 })
 reset2.addEventListener('click', function(){
-    reset();
+    deleteOne();
 })
 
 point.addEventListener('click', function(){
@@ -62,13 +62,11 @@ function refreshDisplay(){
     result.value = operA;
 }
 
-function reset(){
-    numberDigits = document.getElementById("result").value.length;
-    if (numberDigits == 1) {
-        document.getElementById("result").value = "0";
-    } else {
-        document.getElementById("result").value = document.getElementById("result").value.substring(0,numberDigits -1);
-    }
+function deleteOne(){
+    operB = operB;
+    operA = "" ;
+    result.textContent = "";
+    operation = operation;
 }
 
 function clean(){
