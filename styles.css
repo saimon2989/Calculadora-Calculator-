@@ -1,6 +1,7 @@
 *{
     font-family: 'Kufam', cursive;
     margin: auto auto;
+    box-sizing: border-box;
 }
 body{
     background-color: #eee;
@@ -11,8 +12,8 @@ body{
     margin: 30px auto;
     padding: 16px;
     background-color: #eee;
-    width: 295px;
-    height: 470px;
+    width: 320px;
+    height: 500px;
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
                 -2px -2px 12px rgba(255, 255, 255, 0.5),
                 inset 2px -2px 4px rgba(255, 255, 255, 0.1),
@@ -100,6 +101,7 @@ span:hover {
 
 .row1 {
     display: flex;
+    margin-bottom: 10px;
 }
 .row1 > div > span {
     display: flex;
@@ -108,6 +110,7 @@ span:hover {
 }
 .row2{
     display: flex;
+    margin-bottom: 10px;
 }
 .row2 > div > span {
     display: flex;
@@ -116,6 +119,7 @@ span:hover {
 }
 .row3{
     display: flex;
+    margin-bottom: 10px;
 }
 .row3 > div > span {
     display: flex;
@@ -124,6 +128,7 @@ span:hover {
 }
 .row4{
     display: flex;
+    margin-bottom: 10px;
 }
 .row4 > div > span {
     display: flex;

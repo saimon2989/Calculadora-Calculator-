@@ -7,19 +7,16 @@ const reset2 = document.getElementsByName("reset2")[0];
 const equal = document.getElementsByName("equal")[0];
 const point = document.getElementById("point");
 let result = document.getElementById("result");
-
+// Variables especiales
 let operA = '';
 let operB = '';
 let operation = undefined;
-
-
 //Eventos
 numberButton.forEach(function(button){
 button.addEventListener('click', function(){
     addNumber(button.innerText);
     })
 });
-
 opeButton.forEach(function(button){
     button.addEventListener('click', function(){
         selecOperation(button.innerText);
@@ -29,7 +26,6 @@ equal.addEventListener('click', function(){
     answer();
     refreshDisplay();
 });
-
 reset1.addEventListener('click', function(){
     clean();
     refreshDisplay();
@@ -37,13 +33,10 @@ reset1.addEventListener('click', function(){
 reset2.addEventListener('click', function(){
     deleteOne();
 })
-
 point.addEventListener('click', function(){
     addPoint();
 })
-
 // Metodos y funciones
-
 function addNumber(num){
     operA = operA.toString() + num.toString();
     refreshDisplay();
@@ -57,18 +50,15 @@ function selecOperation(op){
     operB = operA;
     operA = "";
 }
-
 function refreshDisplay(){
     result.value = operA;
 }
-
 function deleteOne(){
     operB = operB;
     operA = "" ;
     result.textContent = "";
     operation = operation;
 }
-
 function clean(){
     result.textContent = "";
     operA = "";
@@ -76,12 +66,10 @@ function clean(){
     operation = "";
     document.getElementById('result').value = "0";
 }
-
 function addPoint(num){
     operA = operA + ".";
     refreshDisplay();
 }
-
 function answer(){
     let calculate;
     const anterior = parseFloat(operB);
